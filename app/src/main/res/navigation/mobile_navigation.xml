@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.myapplication.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="com.example.myapplication.aboutus.AboutusFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_aboutus" />
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="com.example.myapplication.services.ServicesFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/nav_costestimation"
+        android:name="com.example.myapplication.costestimation.CostestimationFragment"
+        android:label="Cost Estimation"
+        tools:layout="@layout/fragment_costestimation" />
+    <fragment
+        android:id="@+id/nav_findgarages"
+        android:name="com.example.myapplication.findgarages.FindgaragesFragment"
+        android:label="Find Garages"
+        tools:layout="@layout/fragment_findgarages" />
+    <fragment
+        android:id="@+id/nav_findshops"
+        android:name="com.example.myapplication.findshops.FindshopsFragment"
+        android:label="Find Shops"
+        tools:layout="@layout/fragment_findshops" />
+    <fragment
+        android:id="@+id/nav_driverhistory"
+        android:name="com.example.myapplication.driverhistory.DriverhistoryFragment"
+        android:label="Driver History"
+        tools:layout="@layout/fragment_driverhistory" />
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.example.myapplication.faq.FaqFragment"
+        android:label="FAQ"
+        tools:layout="@layout/fragment_faq" />
+</navigation>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_services"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="Services" />
+        <item
+            android:id="@+id/nav_costestimation"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Cost Estimation" />
+        <item
+            android:id="@+id/nav_findgarages"
+            android:icon="?android:attr/actionModeFindDrawable"
+            android:title="Find Garages" />
+        <item
+            android:id="@+id/nav_findshops"
+            android:icon="?android:attr/actionModeFindDrawable"
+            android:title="Find Spare Parts Shops" />
+        <item
+            android:id="@+id/nav_driverhistory"
+            android:icon="@android:drawable/ic_popup_sync"
+            android:title="Driver History" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="FAQ" />
+    </group>
+</menu>

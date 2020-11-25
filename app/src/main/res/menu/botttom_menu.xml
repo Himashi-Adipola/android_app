@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id ="@+id/find_garage"
+        android:enabled="true"
+        android:title="Find Garage"
+        app:showAsAction="ifRoom"
+
+        />
+
+    <item
+        android:id ="@+id/find_spare_parts"
+        android:enabled="true"
+        android:title="find spare parts"
+        app:showAsAction="ifRoom"
+
+        />
+
+</menu>

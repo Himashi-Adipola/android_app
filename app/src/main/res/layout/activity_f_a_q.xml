@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FAQActivity">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How can we help you?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="65dp"
+            android:layout_height="53dp"
+            android:text="Q1"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.195" />
+
+        <TextView
+            android:id="@+id/q1new"
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="4dp"
+            android:paddingRight="8dp"
+            android:text="Making a vehicle insurance claim might seem a bit confusing.There are terms, concepts and no shortage of fine print that can make things feel more complicated than they need to be. That’s why we’ve looked at the most frequently asked questions about vehicle claims and answered each one."
+            android:textAlignment="gravity"
+            android:textSize="18dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.307" />
+
+        <TextView
+            android:id="@+id/q1"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:onClick="q1Clicked"
+            android:paddingLeft="4dp"
+            android:text="Can the insurance and vehicle ownership be in different names?"
+            android:textColor="#000080"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            app:layout_constraintVertical_bias="0.407" />
+
+        <TextView
+            android:id="@+id/a1"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="No. Registration and insurance of the vehicle should always be in the same name with the same address. Otherwise, the claim is not payable. "
+            android:visibility="gone"
+            android:paddingLeft="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.198"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            app:layout_constraintVertical_bias="0.533"
+            android:textStyle="bold"
+            android:textColor="#660066"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/q2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="q2Clicked"
+            android:paddingLeft="4dp"
+            android:text="Can I change details in a policy?"
+            android:textColor="#000080"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.198"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            app:layout_constraintVertical_bias="0.533" />
+
+        <TextView
+            android:id="@+id/a2"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:paddingLeft="4dp"
+            android:text="Changes like that of an address or modifications to the vehicle or its use will be done by an Endorsement by the insurance company. All you need to do is submit a letter to the insurer with proof of the changes. Some endorsements may require you to pay an additional premium."
+            android:textColor="#660066"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/q3"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:onClick="q3Clicked"
+            android:paddingLeft="4dp"
+            android:text="What Replacement Parts Are Covered By Insurance?"
+            android:textColor="#000080"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/a3"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:paddingLeft="4dp"
+            android:text="It depends on your particular policy. If you purchased insurance that specifically covers OEM parts (parts that come directly from the manufacturer), your repair will be done using replacement OEM parts. Otherwise, you’ll likely get a repair using aftermarket parts, because they’re more affordable for insurers and often just as good as OEM parts. "
+            android:textColor="#660066"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/q4"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:onClick="q4Clicked"
+            android:paddingLeft="4dp"
+            android:text="What is No Claim Bonus?"
+            android:textColor="#000080"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/a4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:text="No Claim Bonus (NCB) is your bonus for driving or riding carefully and not making a claim. You get a discount on your premium. Starting from 20% going all the way to 50%. So be careful on the road. If any claim is made, however small, the no claim bonus is lost."
+            android:textColor="#660066"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/callnow"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/custombutton2"
+            android:text="Call Us Now"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

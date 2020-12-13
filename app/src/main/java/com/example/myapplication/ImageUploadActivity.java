@@ -29,6 +29,8 @@ import com.example.myapplication.model.Prediction;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -40,16 +42,20 @@ import retrofit2.Response;
 public class ImageUploadActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private Button btn_choose ,submit_report, generate_report;
-    private ImageView image;
+    private Button btn_choose,btn_choose2,btn_choose3,btn_choose4 ,submit_report, generate_report,submit_report2,submit_report3,submit_report4;
+    private ImageView image,image2,image3,image4;
     private static final int STORAGE_PERMISSION_CODE= 124;
     private  static  final int PICK_IMAGE_REQUST =2;
     private Uri filePath;
     private Bitmap bitmap;
     final Prediction prediction=new Prediction();
     ProgressDialog progressDialog;
-    private TextView damageType, damageCategory;
-
+    private TextView damageType, damageCategory,damageType2,damageCategory2,damageType3,damageCategory3,damageType4,damageCategory4;
+    private String[] damageTypes,damageCategories;
+    private TextView cost,cost2,cost3,cost4,totalCostText;
+    private double totalCost;
+    private double[] costs;
+    private String[] filePaths;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,16 +67,61 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
     public void init(){
         submit_report =(Button)findViewById(R.id.btn_submit_report);
         submit_report.setOnClickListener(this);
+
+        submit_report2 =(Button)findViewById(R.id.btn_submit_report1a);
+        submit_report2.setOnClickListener(this);
+
+        submit_report3 =(Button)findViewById(R.id.btn_submit_report1b);
+        submit_report3.setOnClickListener(this);
+
+        submit_report4 =(Button)findViewById(R.id.btn_submit_report1c);
+        submit_report4.setOnClickListener(this);
+
+
         image = findViewById(R.id.image);
+        image2 = findViewById(R.id.image1a);
+        image3 = findViewById(R.id.image1b);
+        image4 = findViewById(R.id.image1c);
+
         btn_choose =findViewById(R.id.btn_choose);
         btn_choose.setOnClickListener(this);
 
-        damageType =(TextView) findViewById(R.id.damage_type);
+        btn_choose2 =findViewById(R.id.btn_choose1a);
+        btn_choose2.setOnClickListener(this);
 
+        btn_choose3 =findViewById(R.id.btn_choose1b);
+        btn_choose3.setOnClickListener(this);
+
+        btn_choose4 =findViewById(R.id.btn_choose1c);
+        btn_choose4.setOnClickListener(this);
+
+        damageType =(TextView) findViewById(R.id.damage_type);
         damageCategory =(TextView) findViewById(R.id.damage_Category);
+        cost =(TextView) findViewById(R.id.cost_estimate);
+
+        damageType2 =(TextView) findViewById(R.id.damage_type1a);
+        damageCategory2 =(TextView) findViewById(R.id.damage_Category1a);
+        cost2 =(TextView) findViewById(R.id.cost_estimate1a);
+
+        damageType3 =(TextView) findViewById(R.id.damage_type1b);
+        damageCategory3 =(TextView) findViewById(R.id.damage_Category1b);
+        cost3 =(TextView) findViewById(R.id.cost_estimate1b);
+
+        damageType4 =(TextView) findViewById(R.id.damage_type1c);
+        damageCategory4 =(TextView) findViewById(R.id.damage_Category1c);
+        cost4 =(TextView) findViewById(R.id.cost_estimate1c);
+
+        totalCostText = (TextView) findViewById(R.id.total_cost);
+
         generate_report =(Button)findViewById(R.id.generate_Report);
         generate_report.setOnClickListener(this);
 
+        damageTypes = new String[4];
+        damageCategories = new String[4];
+        costs = new double[4];
+        filePaths= new String[4];
+        initCost();
+        totalCost=0;
 
     }
 
@@ -91,27 +142,43 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
-    private void showFileChooser(){
+    private void showFileChooser(int requestCode){
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"select Picture"),PICK_IMAGE_REQUST);
+        startActivityForResult(Intent.createChooser(intent,"select Picture"),requestCode);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode ==PICK_IMAGE_REQUST && resultCode == RESULT_OK && data != null && data.getData() != null){
+        if(resultCode == RESULT_OK && data != null && data.getData() != null) {
             filePath = data.getData();
-            try {
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),filePath);
-                image.setImageBitmap(bitmap);
+            if (requestCode == 1) {
+                SetImage(image,filePath);
+                filePaths[0] = getPath(filePath);
+            }else if (requestCode == 2){
+                SetImage(image2,filePath);
+                filePaths[1] = getPath(filePath);
+            }else if(requestCode == 3){
+                SetImage(image3,filePath);
+                filePaths[2] = getPath(filePath);
+            }else{
+                SetImage(image4,filePath);
+                filePaths[3] = getPath(filePath);
+            }
+        }
+    }
+
+    private void SetImage(ImageView image, Uri filePath) {
+        try {
+            bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+            image.setImageBitmap(bitmap);
 
 //                uploadToServer(getPath(filePath));
-            }catch (IOException e){
+        } catch (IOException e) {
 
-            }
         }
     }
 
@@ -138,19 +205,45 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
         switch (view.getId()) {
             case R.id.btn_choose:
 //                requestStoragePermission();
-                showFileChooser();
+                showFileChooser(1);
+                break;
+            case R.id.btn_choose1a:
+//                requestStoragePermission();
+                showFileChooser(2);
+                break;
+            case R.id.btn_choose1b:
+//                requestStoragePermission();
+                showFileChooser(3);
+                break;
+            case R.id.btn_choose1c:
+//                requestStoragePermission();
+                showFileChooser(4);
                 break;
             case R.id.btn_submit_report:
-                uploadToServer();
+                uploadToServer(damageType,damageCategory,cost,0);
 //                startActivity(new Intent(this, GenarateReportActivity.class));
 //                startActivity( new Intent(this,com.example.myapplication.MainActivity.class));
 //                requestStoragePermission();
 //                showFileChooser();
                 break;
+            case R.id.btn_submit_report1a:
+                uploadToServer(damageType2,damageCategory2,cost2,1);
+//
+                break;
+            case R.id.btn_submit_report1b:
+                uploadToServer(damageType3,damageCategory3,cost3,2);
+//
+                break;
+            case R.id.btn_submit_report1c:
+                uploadToServer(damageType4,damageCategory4,cost4,3);
+//
+                break;
             case R.id.generate_Report:
                 Intent i = new Intent(getApplicationContext(), GenarateReportActivity.class);
-                i.putExtra("damageType", prediction.getDamageType());
-                i.putExtra("damageCategory",prediction.getDamageCategory());
+                i.putExtra("damageTypes", damageTypes);
+                i.putExtra("damageCategories",damageCategories);
+                i.putExtra("filePaths", filePaths);
+                i.putExtra("totalCost",totalCost);
                 startActivity(i);
 //
 
@@ -170,7 +263,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
 
     }
 
-    private void uploadToServer( ) {
+    private void uploadToServer(TextView damageType, TextView damageCategory,TextView cost,int index ) {
         progressDialog = ProgressDialog.show(this, "", "Please wait");
         ApiClientModelInterface userService = ApiClientModel.getClient().create(ApiClientModelInterface.class);
         //Create a file object using file path
@@ -194,9 +287,15 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
                     prediction.setDamageCategory(response.body().getPredictions().getDamageCategory());
                     prediction.setDamageType(response.body().getPredictions().getDamageType());
 
-                    damageType.setText(damageType.getText() +" "+ prediction.getDamageType());
-                    damageCategory.setText(damageCategory.getText() +" "+ prediction.getDamageCategory());
-
+                    damageType.setText( getString(R.string.damage_type_text)+prediction.getDamageType());
+                    damageCategory.setText(getString(R.string.damage_cat_text)+prediction.getDamageCategory());
+                    double costValue = getCost(prediction.getDamageType(),prediction.getDamageCategory());
+                    cost.setText(getString(R.string.estimate_cost_text) + Double.toString(costValue));
+                    damageTypes[index]=prediction.getDamageType();
+                    damageCategories[index]=prediction.getDamageType();
+                    costs[index]=costValue;
+                    totalCost = getTotalCost();
+                    totalCostText.setText("Rs: "+Double.toString(totalCost));
                     progressDialog.cancel();
 
 //                    System.out.println("resposesssssss body" + prediction.setDamageCategory(response.body().getPredictions().getDamageCategory()));
@@ -225,4 +324,56 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
 
 
     }
+
+    private double getCost(String damageType, String damageCategory){
+        double cost=0.00;
+        if(damageType.equals("minor")){
+            switch(damageCategory){
+                case "doordent": cost = 2000.00; break;
+                case "bumperdent": cost = 6500.00; break;
+                case "glass_shatter": cost = 11000.00; break;
+                case "head_lamp_broken": cost = 6000.00; break;
+                case "nodamage": cost = 0.00; break;
+                case "scratches": cost = 7000.00; break;
+                case "tail_lamp_broken": cost = 6000.00; break;
+                case "smashes": cost = 400000.00; break;
+            }
+        }else if(damageType.equals("moderate")){
+            switch(damageCategory){
+                case "doordent": cost = 3000.00; break;
+                case "bumperdent": cost = 7500.00; break;
+                case "glass_shatter": cost = 12500.00; break;
+                case "head_lamp_broken": cost = 6500.00; break;
+                case "nodamage": cost = 0.00; break;
+                case "scratches": cost = 7500.00; break;
+                case "tail_lamp_broken": cost = 6500.00; break;
+                case "smashes": cost = 400000.00; break;
+            }
+        }else if(damageType.equals("severe")){
+            switch(damageCategory){
+                case "doordent": cost = 4000.00; break;
+                case "bumperdent": cost = 8000.00; break;
+                case "glass_shatter": cost = 14000.00; break;
+                case "head_lamp_broken": cost = 7000.00; break;
+                case "nodamage": cost = 0.00; break;
+                case "scratches": cost = 8000.00; break;
+                case "tail_lamp_broken": cost = 7000.00; break;
+                case "smashes": cost = 400000.00; break;
+            }
+        }
+
+        return cost;
+    }
+
+    private double getTotalCost(){
+        double total=0.00;
+        for(int i=0; i<4; i++){
+            total=total+costs[i];
+        }
+        return total;
+    }
+    private void initCost(){
+        for(int i=0; i<4; i++){
+            costs[i] = 0.00;
+        }    }
 }

@@ -22,4 +22,15 @@
     <string name="menu_slideshow">Services</string>
     <string name="menu_costestimation">Cost Estimation</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="damage_type_text">Damage Type: </string>
+    <string name="damage_cat_text">Damage Category: </string>
+    <string name="estimate_cost_text">Estimate Cost: </string>
+
+    <string name="vehicle_no">Vehicle No: </string>
+    <string name="policy_holder_name">Policy Holder Name: </string>
+    <string name="policy_holder_nic">Policy Holder NIC: </string>
+    <string name="agent_name">Agent Name: </string>
+
+
 </resources>

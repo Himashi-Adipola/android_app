@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,12 +19,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class GenarateReportActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView txtDamageType;
-    private TextView txtDamageCategory;
-    private TextView txtPrice;
+    private TextView txtVehicleNo,txtPolicyHolderName,txtPolicyHolderNIC,txtAgentName,txtTotalCost;
     private Button BtnButton;
-    String damageType;
-    String damageCategory;
+    String[] damageTypes = new String[4];
+    String[] damageCategories = new String[4];
+    String[] filePaths = new String[4];
+    double totalCost;
     int cost;
 
     @Override
@@ -31,24 +32,27 @@ public class GenarateReportActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genarate_report);
         Intent intent = getIntent();
-        damageType = intent.getStringExtra("damageType");
-        damageCategory = intent.getStringExtra("damageCategory");
+        damageTypes = intent.getStringArrayExtra("damageTypes");
+        damageCategories = intent.getStringArrayExtra("damageCategories");
+        filePaths = intent.getStringArrayExtra("filePaths");
+        totalCost = intent.getDoubleExtra("totalCost",0.0);
+
 
         init();
     }
 
     private void init() {
-        txtDamageType = (TextView) findViewById(R.id.txtDamageType);
-        txtDamageType.setText(damageType);
-        txtDamageCategory = (TextView) findViewById(R.id.txtDamageCategory);
-        txtDamageCategory.setText(damageCategory);
-        txtPrice = (TextView) findViewById(R.id.txtPrice); /// check this
 
-        BtnButton = (Button) findViewById(R.id.btnButton);
-        BtnButton.setOnClickListener(this);
-        getCostData();
-//        txtPrice = (TextView) findViewById(R.id.txtPrice);
-//        txtDamageType.setText(damageType);
+        txtVehicleNo = findViewById(R.id.txtVehicleNo);
+        txtPolicyHolderName = findViewById(R.id.txtPolicyHolderName);
+        txtPolicyHolderNIC = findViewById(R.id.txtPolicyHolderNIC);
+        txtAgentName = findViewById(R.id.txtAgentName);
+        txtTotalCost = findViewById(R.id.txtTotalCost);
+
+        setReportData();
+
+        BtnButton = findViewById(R.id.btnButton);
+
     }
 
     @Override
@@ -56,43 +60,50 @@ public class GenarateReportActivity extends AppCompatActivity implements View.On
         switch (view.getId()) {
             case R.id.btnButton:
                 Intent i = new Intent(getApplicationContext(), SendEmailActivity.class);
-                i.putExtra("damageType", damageType);
-                i.putExtra("damageCategory", damageCategory);
+             //   i.putExtra("damageType", damageType);
+              //  i.putExtra("damageCategory", damageCategory);
                 startActivity(i);
                 break;
 
         }
     }
 
+    private void setReportData(){
+        txtVehicleNo.setText(getString(R.string.vehicle_no)+" CAT - 6548");
+        txtPolicyHolderName.setText(getString(R.string.policy_holder_name)+"K.S.S Fernando");
+        txtPolicyHolderNIC.setText(getString(R.string.policy_holder_nic)+"921546587v");
+        txtAgentName.setText(getString(R.string.agent_name)+"S.V. Perera");
+        txtTotalCost.setText(getString(R.string.estimate_cost_text)+Double.toString(totalCost));
+    }
 
     private void getCostData() {
-        System.out.println("GEttttttttttttttt" + damageType + damageCategory);
-
-        ApiInterface getCost = LoginAuth.getClient().create(ApiInterface.class);
-        Call<CostPrediction> call = getCost.getByBoth(damageType,damageCategory);
-
-        call.enqueue(new Callback<CostPrediction>() {
-            @Override
-            public void onResponse(Call<CostPrediction> call, Response<CostPrediction> response) {
-                if (response.isSuccessful()) {
-                 cost =response.body().getCost();
-
-                    txtPrice.setText(Integer.toString(cost));
-//                    RepireCost.setText(Integer.toString(repaircost));
-                     System.out.print("repire cost"+cost);
-
-                } else {
-
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<CostPrediction> call, Throwable t) {
-                System.out.println(t.getMessage());
-            }
-        });
-
+//        //.out.println("GEttttttttttttttt" + damageType + damageCategory);
+//
+//        ApiInterface getCost = LoginAuth.getClient().create(ApiInterface.class);
+//        Call<CostPrediction> call = getCost.getByBoth(damageType,damageCategory);
+//
+//        call.enqueue(new Callback<CostPrediction>() {
+//            @Override
+//            public void onResponse(Call<CostPrediction> call, Response<CostPrediction> response) {
+//                if (response.isSuccessful()) {
+//                 cost =response.body().getCost();
+//
+//                    txtPrice.setText(Integer.toString(cost));
+////                    RepireCost.setText(Integer.toString(repaircost));
+//                     System.out.print("repire cost"+cost);
+//
+//                } else {
+//
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<CostPrediction> call, Throwable t) {
+//                System.out.println(t.getMessage());
+//            }
+//        });
+//
     }
 }
 

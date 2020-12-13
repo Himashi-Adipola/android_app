@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.myapplication.apiOps.ApiInterface;
@@ -20,12 +21,13 @@ import retrofit2.Response;
 
 public class GenarateReportActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView txtVehicleNo,txtPolicyHolderName,txtPolicyHolderNIC,txtAgentName,txtTotalCost;
+    private ListView listView;
     private Button BtnButton;
-    String[] damageTypes = new String[4];
-    String[] damageCategories = new String[4];
-    String[] filePaths = new String[4];
+    String[] damageTypes;
+    String[] damageCategories;
+    String[] filePaths;
+    double[] costs;
     double totalCost;
-    int cost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,11 @@ public class GenarateReportActivity extends AppCompatActivity implements View.On
         damageCategories = intent.getStringArrayExtra("damageCategories");
         filePaths = intent.getStringArrayExtra("filePaths");
         totalCost = intent.getDoubleExtra("totalCost",0.0);
+        costs = intent.getDoubleArrayExtra("costs");
 
-
+        listView = findViewById(R.id.damage_image_list);
+        ClaimImageListView claimImageListView = new ClaimImageListView(this,damageTypes,damageCategories,filePaths,costs);
+        listView.setAdapter(claimImageListView);
         init();
     }
 

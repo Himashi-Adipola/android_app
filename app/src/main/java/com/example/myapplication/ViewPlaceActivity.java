@@ -60,7 +60,7 @@ public class ViewPlaceActivity extends AppCompatActivity {
 
         photo =(ImageView) findViewById(R.id.photo);
         if(Common.currentResults.getPhotos() !=  null && Common.currentResults.getPhotos().length > 0){
-            Picasso.with(this)
+            Picasso.get()
                     .load(getPhotoOfPlace(Common.currentResults.getPhotos()[0].getPhoto_reference(),1000))
                     .placeholder(R.drawable.ic_baseline_image_24)
                     .error(R.drawable.ic_baseline_error_24)

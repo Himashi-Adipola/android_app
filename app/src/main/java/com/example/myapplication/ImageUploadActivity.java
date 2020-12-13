@@ -244,6 +244,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
                 i.putExtra("damageCategories",damageCategories);
                 i.putExtra("filePaths", filePaths);
                 i.putExtra("totalCost",totalCost);
+                i.putExtra("costs",costs);
                 startActivity(i);
 //
 

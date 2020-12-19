@@ -48,11 +48,11 @@ public class ClaimImageListView extends ArrayAdapter {
         TextView txtDamageCat = (TextView) row.findViewById(R.id.rp_damage_Category);
         TextView txtCost = (TextView) row.findViewById(R.id.rp_cost_estimate);
 
-
             txtDamageType.setText(context.getString(R.string.damage_type_text) + damageTypes[position]);
             txtDamageCat.setText(context.getString(R.string.damage_cat_text) + damageCategories[position]);
             txtCost.setText(context.getString(R.string.estimate_cost_text) + Double.toString(costs[position]));
         }
+
 
         if(filePaths[position] != null ) {
             File imgFile = new File(filePaths[position]);

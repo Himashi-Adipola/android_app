@@ -293,7 +293,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
                     double costValue = getCost(prediction.getDamageType(),prediction.getDamageCategory());
                     cost.setText(getString(R.string.estimate_cost_text) + Double.toString(costValue));
                     damageTypes[index]=prediction.getDamageType();
-                    damageCategories[index]=prediction.getDamageType();
+                    damageCategories[index]=prediction.getDamageCategory();
                     costs[index]=costValue;
                     totalCost = getTotalCost();
                     totalCostText.setText("Rs: "+Double.toString(totalCost));

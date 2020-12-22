@@ -10,7 +10,7 @@ public class LoginAuth {
 
 
 // private static final String BASE_URL ="https://127.0.0.1:8000";
-private static final String BASE_URL ="http://localhost:8000/api/";
+private static final String BASE_URL ="http://hms.ruh.ac.lk/api/";
 
     private static Retrofit retrofit = null;
 

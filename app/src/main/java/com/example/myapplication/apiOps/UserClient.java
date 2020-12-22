@@ -3,26 +3,32 @@ package com.example.myapplication.apiOps;
 import com.example.myapplication.model.Login;
 import com.example.myapplication.model.MyPlaces;
 import com.example.myapplication.model.User;
+import com.example.myapplication.model.UserList;
 import com.example.myapplication.model.users;
 
 import org.json.JSONObject;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 import retrofit2.http.Url;
 
 public interface UserClient {
 
 //    @POST("login")
 //    Call<Login> LoginAPPP(@Body Login login);
-    @POST("login")
+    @POST("mobile_login")
     Call<JSONObject> LoginAPPP(@Body Login Login);
 
-    @POST("/register")
+    @POST("register")
     Call<JSONObject> register(@Body users user);
 
-
+    @GET("get_login/{email}")
+    Call<UserList> getLogin (@Path("email") String email);
 
 }

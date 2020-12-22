@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.bluetooth.BluetoothClass;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,15 +32,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText Email, Password;
     Button LoginButton;
     TextView PasswordReset;
-     String device_name ="test";
+    String device_name ="browser";
     String token;
 
-
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sharedPreferences = getSharedPreferences("myData", MODE_PRIVATE);
         init();
     }
 
@@ -57,9 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bLogin:
-//                loginA();
-
-                startActivity( new Intent(this,AgentProfileActivity.class));
+                loginA();
                 break;
 
             case R.id.resetPassword:
@@ -69,41 +69,42 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
-//    private void loginA(){
-//        Login login = new Login();
-//      login.setEmail(Email.getText().toString().trim());
-//      login.setPassword(Password.getText().toString().trim());
-//      login.setDevice_name(device_name);
-//
-//
-//        UserClient userService = LoginAuth.getClient().create(UserClient.class);
-//
-//        Call<JSONObject>call = userService.LoginAPPP(login);
-//
-//        call.enqueue(new Callback<JSONObject>() {
-//            @Override
-//            public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
-//                if (response.isSuccessful()) {
-//                    System.out.println("response body" + response.body());
-//          //          startActivity( new Intent(this,AgentProfileActivity.class));
-////                    String token = response.body()
-//                 //   Intent intent = new Intent(getApplicationContext(), AgentProfileActivity.class);
-//                 //  startActivity(intent);
-//                } else {
-//                    try {
-//                        Toast.makeText(getApplicationContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
-//                    } catch (IOException e) {
-//
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<JSONObject> call, Throwable t) {
-//
-//            }
-//        });
-//    }
+    private void loginA(){
+        Login login = new Login();
+      login.setEmail(Email.getText().toString().trim());
+      login.setPassword(Password.getText().toString().trim());
+      login.setDevice_name(device_name);
+
+
+        UserClient userService = LoginAuth.getClient().create(UserClient.class);
+
+        Call<JSONObject>call = userService.LoginAPPP(login);
+
+        call.enqueue(new Callback<JSONObject>() {
+            @Override
+            public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
+                if (response.isSuccessful()) {
+                    System.out.println("response body" + response.body());
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("email",Email.getText().toString().trim());
+                    editor.apply();
+                    Intent intent = new Intent(getApplicationContext(), AgentProfileActivity.class);
+                   startActivity(intent);
+                } else {
+                    try {
+                        Toast.makeText(getApplicationContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JSONObject> call, Throwable t) {
+
+            }
+        });
+    }
 
     private void getSecret(){
 

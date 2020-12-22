@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:text="Email Address"
+            android:hint="Email Address"
             android:textColorHint="@color/colorPrimary"
             android:textSize="24sp" />
 
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:text="Password"
+            android:hint="Password"
             android:textColorHint="@color/colorPrimary"
             android:textSize="34sp" />
 

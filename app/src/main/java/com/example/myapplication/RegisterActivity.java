@@ -59,8 +59,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.register:
-//                loadRecylerViewData();
-//            startActivity( new Intent(this,AgentProfileActivity.class));
+                loadRecylerViewData();
+
                  break;
             case R.id.directToLogin:
                 startActivity( new Intent(this,LoginActivity.class));
@@ -69,42 +69,40 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
-//    private void loadRecylerViewData() {
-//        users user = new users();
-//        user.setFirstName(FirstName1.getText().toString());
-//        user.setLastName(LastName1.getText().toString());
-//        user.setEmail(Email1.getText().toString());
-//        user.setPassword(Password1.getText().toString());
-//        user.setRole(role);
-//        System.out.println("outputtttttt"+ user);
-//
-//        UserClient userService = LoginAuth.getClient().create(UserClient.class);
-//
-//        Call <JSONObject> call = userService.register(user);
-//
-//        call.enqueue(new Callback<JSONObject>() {
-//
-//            @Override
-//            public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
-//                if (response.isSuccessful()) {
-//
-//                    Intent intent = new Intent(getApplicationContext(),ImageUploadActivity.class);
-//                    startActivity(intent);
-//                } else {
-//                    try {
-//                        Toast.makeText(getApplicationContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
-//                    } catch (IOException e) {
-//
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<JSONObject> call, Throwable t) {
-//
-//            }
-//        });
-//    }
+    private void loadRecylerViewData() {
+        users user = new users();
+        user.setFirstName(FirstName1.getText().toString());
+        user.setLastName(LastName1.getText().toString());
+        user.setEmail(Email1.getText().toString());
+        user.setPassword(Password1.getText().toString());
+        user.setRole(role);
+        System.out.println("outputtttttt"+ user);
+
+        UserClient userService = LoginAuth.getClient().create(UserClient.class);
+
+        Call <JSONObject> call = userService.register(user);
+
+        call.enqueue(new Callback<JSONObject>() {
+
+            @Override
+            public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
+                if (response.isSuccessful()) {
+                    startActivity( new Intent(getApplicationContext(),AgentProfileActivity.class));
+                } else {
+                    try {
+                        Toast.makeText(getApplicationContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JSONObject> call, Throwable t) {
+
+            }
+        });
+    }
 
     }
 

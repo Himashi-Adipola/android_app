@@ -20,6 +20,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.myapplication.apiOps.LoginAuth;
 import com.example.myapplication.apiOps.UserClient;
+import com.example.myapplication.model.Agent;
 import com.example.myapplication.model.Login;
 import com.example.myapplication.model.UserList;
 import com.example.myapplication.model.users;
@@ -122,8 +123,27 @@ public class AgentProfileActivity extends AppCompatActivity implements Navigatio
                     String name = response.body().getUsers().get(0).getFirstName() +" "+ response.body().getUsers().get(0).getLastName() ;
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("username", name);
-                    editor.commit();
-                    username.setText(name);
+                    editor.putString("role",response.body().getUsers().get(0).getRole());
+                    editor.apply();
+                    username.setText(name+" - "+sharedPreferences.getString("role","role"));
+
+                    if(response.body().getUsers().get(0).getRole().equalsIgnoreCase("agent")){
+                        Call<List<Agent>> agentCall = userService.getAgent(sharedPreferences.getString("email","email@gmail.com"));
+
+                        agentCall.enqueue(new Callback<List<Agent>>() {
+                            @Override
+                            public void onResponse(Call<List<Agent>> call, Response<List<Agent>> response) {
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putInt("agId", response.body().get(0).getAgId());
+                                editor.apply();
+                            }
+
+                            @Override
+                            public void onFailure(Call<List<Agent>> call, Throwable t) {
+
+                            }
+                        });
+                    }
 
                 } else {
                     try {

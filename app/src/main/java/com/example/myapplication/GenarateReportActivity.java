@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,7 @@ public class GenarateReportActivity extends AppCompatActivity implements View.On
     String[] filePaths;
     double[] costs;
     double totalCost;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class GenarateReportActivity extends AppCompatActivity implements View.On
         filePaths = intent.getStringArrayExtra("filePaths");
         totalCost = intent.getDoubleExtra("totalCost",0.0);
         costs = intent.getDoubleArrayExtra("costs");
+
+        sharedPreferences = getSharedPreferences("myData", MODE_PRIVATE);
 
         listView = findViewById(R.id.damage_image_list);
         ClaimImageListView claimImageListView = new ClaimImageListView(this,damageTypes,damageCategories,filePaths,costs);
@@ -57,6 +61,7 @@ public class GenarateReportActivity extends AppCompatActivity implements View.On
         setReportData();
 
         BtnButton = findViewById(R.id.btnButton);
+        BtnButton.setOnClickListener(this);
 
     }
 
@@ -64,21 +69,47 @@ public class GenarateReportActivity extends AppCompatActivity implements View.On
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnButton:
-                Intent i = new Intent(getApplicationContext(), SendEmailActivity.class);
-             //   i.putExtra("damageType", damageType);
-              //  i.putExtra("damageCategory", damageCategory);
-                startActivity(i);
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{"claimpaul1@gmail.com"});
+                email.putExtra(Intent.EXTRA_SUBJECT, getSubject());
+                email.putExtra(Intent.EXTRA_TEXT, getMessage());
+
+                //need this to prompts email client only
+                email.setType("message/rfc822");
+                startActivity(Intent.createChooser(email, "Choose an Email client :"));
                 break;
 
         }
     }
 
     private void setReportData(){
-        txtVehicleNo.setText(getString(R.string.vehicle_no)+" CAT - 6548");
-        txtPolicyHolderName.setText(getString(R.string.policy_holder_name)+"K.S.S Fernando");
-        txtPolicyHolderNIC.setText(getString(R.string.policy_holder_nic)+"921546587v");
-        txtAgentName.setText(getString(R.string.agent_name)+"S.V. Perera");
+        txtVehicleNo.setText(getString(R.string.vehicle_no)+sharedPreferences.getString("vehicleno","xx-xxxx"));
+        txtPolicyHolderName.setText(getString(R.string.policy_holder_name)+sharedPreferences.getString("policyholdername","name"));
+        txtPolicyHolderNIC.setText(getString(R.string.policy_holder_nic)+sharedPreferences.getString("nic","xxxxxxxxxv"));
+        txtAgentName.setText(getString(R.string.agent_name)+sharedPreferences.getString("username","name"));
         txtTotalCost.setText(getString(R.string.estimate_cost_text)+Double.toString(totalCost));
+    }
+
+    private String getMessage(){
+        String message;
+        message = "Vehicle No: "+ sharedPreferences.getString("vehicleno","xx-xxxx")+"\n";
+        message += "Policy Holder Name: "+sharedPreferences.getString("policyholdername","name")+"\n";
+        message += "Agent Name: "+sharedPreferences.getString("username","name")+"\n";
+        message += "Description: "+sharedPreferences.getString("description","description")+"\n";
+        message += "Date: "+sharedPreferences.getString("date","date")+"\n";
+        message += "Place: "+sharedPreferences.getString("place","place")+"\n";
+        message += "Estimate Cost: "+Double.toString(totalCost)+"\n";
+
+
+        return message;
+    }
+
+    private String getSubject(){
+        String subject;
+        subject = "Policy Holder "+sharedPreferences.getString("policyholdername","name")+
+                " Vehicle No: "+ sharedPreferences.getString("vehicleno","xx-xxxx")+ " Cost Estimation Report";
+
+        return subject;
     }
 
     private void getCostData() {

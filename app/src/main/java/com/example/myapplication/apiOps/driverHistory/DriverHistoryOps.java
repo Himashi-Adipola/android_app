@@ -29,6 +29,7 @@ public class DriverHistoryOps {
     private static final String TAG = "DriverHistoryVerifyActivity";
 
     List<DriverHistory> driverHistories = new ArrayList<>();
+    private static List<DriverHistory> filterDriverHistories = new ArrayList<>();
 
     //set when matched to provided nic
     private static DriverHistory driverHistory = null;
@@ -63,16 +64,16 @@ public class DriverHistoryOps {
         {
             if (driverHistory.getNic().equals(driverNIC))
             {
-                this.driverHistory = driverHistory;
+                this.filterDriverHistories.add(driverHistory) ;
                 driverAvailable =  true;
             }
         }
         return driverAvailable;
     }
 
-    public static DriverHistory getDriverHistory()
+    public static List<DriverHistory> getDriverHistory()
     {
-        return driverHistory;
+        return filterDriverHistories;
     }
 
     public void setApiInterface(ApiInterface apiInterface)

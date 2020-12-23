@@ -10,6 +10,7 @@ import android.Manifest;
 import android.app.ProgressDialog;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -24,8 +25,16 @@ import android.widget.Toast;
 
 import com.example.myapplication.apiOps.ApiClientModel;
 import com.example.myapplication.apiOps.ApiClientModelInterface;
+import com.example.myapplication.apiOps.LoginAuth;
+import com.example.myapplication.apiOps.UserClient;
+import com.example.myapplication.model.Login;
 import com.example.myapplication.model.ModelResponse;
 import com.example.myapplication.model.Prediction;
+import com.example.myapplication.model.Report;
+import com.example.myapplication.model.Vehicle;
+import com.example.myapplication.model.VehicleList;
+
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -56,11 +65,13 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
     private double totalCost;
     private double[] costs;
     private String[] filePaths;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_upload);
+        sharedPreferences = getSharedPreferences("myData", MODE_PRIVATE);
         requestStoragePermission();
         init();
     }
@@ -115,6 +126,13 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
 
         generate_report =(Button)findViewById(R.id.generate_Report);
         generate_report.setOnClickListener(this);
+
+        String role = sharedPreferences.getString("role","agent");
+        if(role.equals("agent")){
+            generate_report.setVisibility(View.VISIBLE);
+        }else{
+            generate_report.setVisibility(View.INVISIBLE);
+        }
 
         damageTypes = new String[4];
         damageCategories = new String[4];
@@ -239,6 +257,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
 //
                 break;
             case R.id.generate_Report:
+                putReport();
                 Intent i = new Intent(getApplicationContext(), GenarateReportActivity.class);
                 i.putExtra("damageTypes", damageTypes);
                 i.putExtra("damageCategories",damageCategories);
@@ -262,6 +281,45 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
 //        VehicleColor.setText(colour1);
 
 
+    }
+
+    private void putReport(){
+        Report report =new Report();
+        report.setVehicleNumber(sharedPreferences.getString("vehicleno","xx-xxxx"));
+        report.setPlace(sharedPreferences.getString("place","place"));
+        report.setrDate(sharedPreferences.getString("date","xx-xx-xxxx"));
+        report.setrCost(totalCost);
+        report.setrDescription(sharedPreferences.getString("description","description"));
+        report.setAgId(sharedPreferences.getInt("agId",0));
+
+
+        UserClient userService = LoginAuth.getClient().create(UserClient.class);
+
+        Call<JSONObject>call = userService.putReport(report);
+
+        call.enqueue(new Callback<JSONObject>() {
+            @Override
+            public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
+                if (response.isSuccessful()) {
+                    System.out.println("response body" + response.body());
+
+
+                    Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    try {
+                        Toast.makeText(getApplicationContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JSONObject> call, Throwable t) {
+
+            }
+        });
     }
 
     private void uploadToServer(TextView damageType, TextView damageCategory,TextView cost,int index ) {
@@ -362,6 +420,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
                 case "smashes": cost = 400000.00; break;
             }
         }
+
 
         return cost;
     }

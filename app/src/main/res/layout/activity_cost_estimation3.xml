@@ -21,17 +21,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="177dp"
-        android:layout_height="37dp"
-        android:background="@drawable/custombutton2"
-        android:text="ENTER"
-        android:textColor="#ffff"
-        android:textStyle="bold"
+    <ListView
+        android:id="@+id/vehicle_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.89" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.051" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

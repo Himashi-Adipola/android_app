@@ -12,7 +12,7 @@ import retrofit2.http.Path;
 public interface ApiInterface {
 
 //    @GET("d9f1c2f6-3765-4ec3-9a95-a75a8ae2e9f2")
-    @GET("d9f1c2f6-3765-4ec3-9a95-a75a8ae2e9f2")
+    @GET("driver-history")
     Call<List<DriverHistory>> getDriverHistories();
 
     @GET("/getcost/{damageType}/{damageArea}")

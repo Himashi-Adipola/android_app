@@ -47,4 +47,10 @@
         android:name="com.example.myapplication.faq.FaqFragment"
         android:label="FAQ"
         tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.myapplication.logout.LogoutFragment"
+        android:label="Log Out"
+        tools:layout="@layout/activity_main" />
 </navigation>

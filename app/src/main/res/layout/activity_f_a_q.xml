@@ -62,7 +62,7 @@
         <TextView
             android:id="@+id/q1"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
+            android:layout_height="70dp"
             android:onClick="q1Clicked"
             android:paddingLeft="4dp"
             android:text="Can the insurance and vehicle ownership be in different names?"
@@ -80,19 +80,19 @@
         <TextView
             android:id="@+id/a1"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:text="No. Registration and insurance of the vehicle should always be in the same name with the same address. Otherwise, the claim is not payable. "
-            android:visibility="gone"
+            android:layout_height="82dp"
             android:paddingLeft="4dp"
+            android:text="No. Registration and insurance of the vehicle should always be in the same name with the same address. Otherwise, the claim is not payable. "
+            android:textColor="#660066"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.198"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView9"
-            app:layout_constraintVertical_bias="0.533"
-            android:textStyle="bold"
-            android:textColor="#660066"
-            android:textSize="17sp"/>
+            app:layout_constraintVertical_bias="0.533" />
 
         <TextView
             android:id="@+id/q2"
@@ -115,7 +115,7 @@
         <TextView
             android:id="@+id/a2"
             android:layout_width="match_parent"
-            android:layout_height="137dp"
+            android:layout_height="145dp"
             android:paddingLeft="4dp"
             android:text="Changes like that of an address or modifications to the vehicle or its use will be done by an Endorsement by the insurance company. All you need to do is submit a letter to the insurer with proof of the changes. Some endorsements may require you to pay an additional premium."
             android:textColor="#660066"
@@ -126,7 +126,7 @@
         <TextView
             android:id="@+id/q3"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="wrap_content"
             android:onClick="q3Clicked"
             android:paddingLeft="4dp"
             android:text="What Replacement Parts Are Covered By Insurance?"
@@ -138,7 +138,7 @@
         <TextView
             android:id="@+id/a3"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="161dp"
             android:paddingLeft="4dp"
             android:text="It depends on your particular policy. If you purchased insurance that specifically covers OEM parts (parts that come directly from the manufacturer), your repair will be done using replacement OEM parts. Otherwise, you’ll likely get a repair using aftermarket parts, because they’re more affordable for insurers and often just as good as OEM parts. "
             android:textColor="#660066"
@@ -149,7 +149,7 @@
         <TextView
             android:id="@+id/q4"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:layout_height="39dp"
             android:onClick="q4Clicked"
             android:paddingLeft="4dp"
             android:text="What is No Claim Bonus?"
@@ -162,7 +162,7 @@
         <TextView
             android:id="@+id/a4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="138dp"
             android:paddingLeft="4dp"
             android:text="No Claim Bonus (NCB) is your bonus for driving or riding carefully and not making a claim. You get a discount on your premium. Starting from 20% going all the way to 50%. So be careful on the road. If any claim is made, however small, the no claim bonus is lost."
             android:textColor="#660066"
@@ -178,5 +178,6 @@
             android:text="Call Us Now"
             android:textSize="25sp" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

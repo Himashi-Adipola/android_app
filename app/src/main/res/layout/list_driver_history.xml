@@ -6,337 +6,760 @@
     android:layout_height="match_parent"
     tools:context=".DriverHistoryActivity">
 
-    <TextView
-        android:id="@+id/textVehicleNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vehicle No :"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+<!--    <TextView-->
+<!--        android:id="@+id/textVehicleNo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Vehicle No :"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textColorHighlight="@color/colorPrimary"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.051" />-->
 
-    <TextView
-        android:id="@+id/txtVName"
-        android:layout_width="80dp"
-        android:layout_height="18dp"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtName"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVName"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="18dp"-->
+<!--        android:text="Name"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtName"-->
+<!--        app:layout_constraintHorizontal_bias="0.407"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.147" />-->
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_width="80dp"
-        android:layout_height="18dp"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtName"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="18dp"-->
+<!--        android:text="Name"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.407"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.147" />-->
 
-    <TextView
-        android:id="@+id/txtVAddress"
-        android:layout_width="80dp"
-        android:layout_height="17dp"
-        android:text="Address"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtAddress"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVAddress"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="17dp"-->
+<!--        android:text="Address"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtAddress"-->
+<!--        app:layout_constraintHorizontal_bias="0.407"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.246" />-->
 
-    <TextView
-        android:id="@+id/txtAddress"
-        android:layout_width="80dp"
-        android:layout_height="17dp"
-        android:text="Address"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtAddress"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="17dp"-->
+<!--        android:text="Address"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.407"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.246" />-->
 
-    <TextView
-        android:id="@+id/txtVDOB"
-        android:layout_width="93dp"
-        android:layout_height="17dp"
-        android:text="Date of birth"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtDOB"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVDOB"-->
+<!--        android:layout_width="93dp"-->
+<!--        android:layout_height="17dp"-->
+<!--        android:text="Date of birth"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtDOB"-->
+<!--        app:layout_constraintHorizontal_bias="0.533"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.196" />-->
 
-    <TextView
-        android:id="@+id/txtDOB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date of birth"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtDOB"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Date of birth"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.459"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.196" />-->
 
-    <TextView
-        android:id="@+id/txtVContact"
-        android:layout_width="81dp"
-        android:layout_height="17dp"
-        android:text="Contact"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtContact"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVContact"-->
+<!--        android:layout_width="81dp"-->
+<!--        android:layout_height="17dp"-->
+<!--        android:text="Contact"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtContact"-->
+<!--        app:layout_constraintHorizontal_bias="0.4"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.291" />-->
 
-    <TextView
-        android:id="@+id/txtContact"
-        android:layout_width="81dp"
-        android:layout_height="17dp"
-        android:text="Contact"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtContact"-->
+<!--        android:layout_width="81dp"-->
+<!--        android:layout_height="17dp"-->
+<!--        android:text="Contact"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.409"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.291" />-->
 
-    <TextView
-        android:id="@+id/txtVVehNo"
-        android:layout_width="81dp"
-        android:layout_height="19dp"
-        android:text="Vehicle No"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVVehNo"-->
+<!--        android:layout_width="81dp"-->
+<!--        android:layout_height="19dp"-->
+<!--        android:text="Vehicle No"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtVehNo"-->
+<!--        app:layout_constraintHorizontal_bias="0.4"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.332" />-->
 
-    <TextView
-        android:id="@+id/txtVehNo"
-        android:layout_width="81dp"
-        android:layout_height="19dp"
-        android:text="Vehicle No"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVehNo"-->
+<!--        android:layout_width="81dp"-->
+<!--        android:layout_height="19dp"-->
+<!--        android:text="Vehicle No"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.409"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.332" />-->
 
-    <TextView
-        android:id="@+id/txtVRepostID"
-        android:layout_width="83dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="371dp"
-        android:layout_marginEnd="306dp"
-        android:layout_marginBottom="342dp"
-        android:text="Report ID"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVRepostID"-->
+<!--        android:layout_width="83dp"-->
+<!--        android:layout_height="18dp"-->
+<!--        android:layout_marginStart="22dp"-->
+<!--        android:layout_marginTop="371dp"-->
+<!--        android:layout_marginEnd="306dp"-->
+<!--        android:layout_marginBottom="342dp"-->
+<!--        android:text="Report ID"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/txtVReDes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="467dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="245dp"
-        android:text="Report Description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVReDes"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="467dp"-->
+<!--        android:layout_marginEnd="274dp"-->
+<!--        android:layout_marginBottom="245dp"-->
+<!--        android:text="Report Description"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/txtVReportCost"
-        android:layout_width="86dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="435dp"
-        android:layout_marginEnd="305dp"
-        android:layout_marginBottom="278dp"
-        android:text="Report Cost"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVReportCost"-->
+<!--        android:layout_width="86dp"-->
+<!--        android:layout_height="18dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="435dp"-->
+<!--        android:layout_marginEnd="305dp"-->
+<!--        android:layout_marginBottom="278dp"-->
+<!--        android:text="Report Cost"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/txtVReDate"
-        android:layout_width="82dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="405dp"
-        android:layout_marginEnd="307dp"
-        android:layout_marginBottom="310dp"
-        android:text="Report Date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVReDate"-->
+<!--        android:layout_width="82dp"-->
+<!--        android:layout_height="16dp"-->
+<!--        android:layout_marginStart="22dp"-->
+<!--        android:layout_marginTop="405dp"-->
+<!--        android:layout_marginEnd="307dp"-->
+<!--        android:layout_marginBottom="310dp"-->
+<!--        android:text="Report Date"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/txtVPlace"
-        android:layout_width="82dp"
-        android:layout_height="21dp"
-        android:text="Place"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtPlace"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.385" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVPlace"-->
+<!--        android:layout_width="82dp"-->
+<!--        android:layout_height="21dp"-->
+<!--        android:text="Place"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtPlace"-->
+<!--        app:layout_constraintHorizontal_bias="0.384"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.385" />-->
 
-    <TextView
-        android:id="@+id/txtPlace"
-        android:layout_width="82dp"
-        android:layout_height="21dp"
-        android:text="Place"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.385" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtPlace"-->
+<!--        android:layout_width="82dp"-->
+<!--        android:layout_height="21dp"-->
+<!--        android:text="Place"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.41"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.385" />-->
 
-    <TextView
-        android:id="@+id/txtVAgentID"
-        android:layout_width="83dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="309dp"
-        android:layout_marginBottom="403dp"
-        android:text="Agent ID"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.371"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVAgentID"-->
+<!--        android:layout_width="83dp"-->
+<!--        android:layout_height="19dp"-->
+<!--        android:layout_marginStart="21dp"-->
+<!--        android:layout_marginTop="309dp"-->
+<!--        android:layout_marginBottom="403dp"-->
+<!--        android:text="Agent ID"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.371"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
-    <TextView
-        android:id="@+id/txtVAccepted"
-        android:layout_width="83dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="308dp"
-        android:layout_marginBottom="374dp"
-        android:text="Accepted"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtVAccepted"-->
+<!--        android:layout_width="83dp"-->
+<!--        android:layout_height="18dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="339dp"-->
+<!--        android:layout_marginEnd="308dp"-->
+<!--        android:layout_marginBottom="374dp"-->
+<!--        android:text="Accepted"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
-    <TextView
-        android:id="@+id/txtDescription"
-        android:layout_width="75dp"
-        android:layout_height="19dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtDescription"-->
+<!--        android:layout_width="75dp"-->
+<!--        android:layout_height="19dp"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="start|top"-->
+<!--        android:inputType="textMultiLine"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.464"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.655" />-->
 
-    <TextView
-        android:id="@+id/txtReportCost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="report cost"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtReportCost"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="report cost"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.447"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.609" />-->
 
-    <TextView
-        android:id="@+id/txtReportDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="report date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtReportDate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="report date"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.434"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.564" />-->
 
-    <TextView
-        android:id="@+id/txtReportID"
-        android:layout_width="93dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="371dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="341dp"
-        android:text="report ID"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtReportID"-->
+<!--        android:layout_width="93dp"-->
+<!--        android:layout_height="19dp"-->
+<!--        android:layout_marginStart="138dp"-->
+<!--        android:layout_marginTop="371dp"-->
+<!--        android:layout_marginEnd="180dp"-->
+<!--        android:layout_marginBottom="341dp"-->
+<!--        android:text="report ID"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
-    <TextView
-        android:id="@+id/txtAccept"
-        android:layout_width="95dp"
-        android:layout_height="21dp"
-        android:text="Accept"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtAccept"-->
+<!--        android:layout_width="95dp"-->
+<!--        android:layout_height="21dp"-->
+<!--        android:text="Accept"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.43"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.473" />-->
 
-    <TextView
-        android:id="@+id/txtAgentID"
-        android:layout_width="91dp"
-        android:layout_height="17dp"
-        android:text="agent ID"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtVAgentID"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtAgentID"-->
+<!--        android:layout_width="91dp"-->
+<!--        android:layout_height="17dp"-->
+<!--        android:text="agent ID"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtVAgentID"-->
+<!--        app:layout_constraintHorizontal_bias="0.511"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.432" />-->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textVehicleNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle No :"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.051" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVName"
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textSize="15dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtName"
+                app:layout_constraintHorizontal_bias="0.407"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.147" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:text="Name"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.407"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.147" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVAddress"
+                android:layout_width="80dp"
+                android:layout_height="17dp"
+                android:text="Address"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtAddress"
+                app:layout_constraintHorizontal_bias="0.407"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.246" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="80dp"
+                android:layout_height="17dp"
+                android:text="Address"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.407"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.246" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtVDOB"
+                android:layout_width="93dp"
+                android:layout_height="17dp"
+                android:text="Date of birth"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtDOB"
+                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.196" />
+
+            <TextView
+                android:id="@+id/txtDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of birth"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.459"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.196" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVContact"
+                android:layout_width="81dp"
+                android:layout_height="17dp"
+                android:textStyle="bold"
+                android:text="Contact"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtContact"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.291" />
+
+            <TextView
+                android:id="@+id/txtContact"
+                android:layout_width="81dp"
+                android:layout_height="17dp"
+                android:text="Contact"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.291" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtVVehNo"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Vehicle No"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+            <TextView
+                android:id="@+id/txtVehNo"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Vehicle No"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txtVPlace"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:textStyle="bold"
+                android:text="Place"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtPlace"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+            <TextView
+                android:id="@+id/txtPlace"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Place"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                android:id="@+id/txtVAgentID"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="agent ID"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVAgentID"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+            <TextView
+                android:id="@+id/txtAgentID"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="agent ID"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtVAccepted"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Accepted"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+            <TextView
+                android:id="@+id/txtAccept"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Accept"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtVRepostID"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Report ID"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+            <TextView
+                android:id="@+id/txtReportID"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="report ID"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtVReDate"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Report Date"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+            <TextView
+                android:id="@+id/txtReportDate"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="report date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtVReportCost"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Report Cost"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+            <TextView
+                android:id="@+id/txtReportCost"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="report cost"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+            <TextView
+                android:id="@+id/txtVReDes"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:text="Report Description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

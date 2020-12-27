@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.bluetooth.BluetoothClass;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.apiOps.LoginAuth;
@@ -34,7 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextView PasswordReset;
     String device_name ="browser";
     String token;
-
+    private TextView alertText;
     private SharedPreferences sharedPreferences;
 
     @Override
@@ -60,7 +62,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()) {
             case R.id.bLogin:
                 loginA();
+                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                builder.setCancelable(true);
+                builder.setTitle("Massage");
+                builder.setMessage("You Are Successfully registered");
+                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+
+                    }
+                });
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        alertText.setVisibility(view.VISIBLE);
+                        alertText.setVisibility(view.VISIBLE);
+                    }
+                });
+                builder.show();
                 break;
+
 
             case R.id.resetPassword:
                 startActivity( new Intent(this,ResetPassword.class));

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.apiOps.ApiClient;
@@ -28,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     Button Register;
     TextView DirectToLogin;
     String role = "policyholder";
+    private TextView alertText;
 
 
 
@@ -60,6 +63,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.register:
                 loadRecylerViewData();
+                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                builder.setCancelable(true);
+                builder.setTitle("Massage");
+                builder.setMessage("You Are Successfully registered");
+                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+
+                    }
+                });
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        alertText.setVisibility(view.VISIBLE);
+                        alertText.setVisibility(view.VISIBLE);
+                    }
+                });
+                builder.show();
 
                  break;
             case R.id.directToLogin:

@@ -2,111 +2,108 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".GenarateReportActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".GenarateReportActivity">
 
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Final Report OF Claim"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
 
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Final Report OF Claim"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHighlight="@color/colorPrimary"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.051" />
+    <TextView
+        android:id="@+id/txtVehicleNo"
+        android:layout_width="279dp"
+        android:layout_height="19dp"
+        android:text="Vehicle No: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
 
+    <TextView
+        android:id="@+id/txtPolicyHolderName"
+        android:layout_width="276dp"
+        android:layout_height="21dp"
+        android:text="Policy Holder Name: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
 
-            <TextView
-                android:id="@+id/txtVehicleNo"
-                android:layout_width="279dp"
-                android:layout_height="19dp"
-                android:text="Vehicle No: "
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.046"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158" />
+    <TextView
+        android:id="@+id/txtPolicyHolderNIC"
+        android:layout_width="278dp"
+        android:layout_height="20dp"
+        android:text="Policy Holder NIC: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
 
-            <TextView
-                android:id="@+id/txtPolicyHolderName"
-                android:layout_width="276dp"
-                android:layout_height="21dp"
-                android:text="Policy Holder Name: "
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.066"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.257" />
+    <TextView
+        android:id="@+id/txtAgentName"
+        android:layout_width="276dp"
+        android:layout_height="19dp"
+        android:text="Agent Name: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
 
-            <TextView
-                android:id="@+id/txtPolicyHolderNIC"
-                android:layout_width="278dp"
-                android:layout_height="20dp"
-                android:text="Policy Holder NIC: "
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.052"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.209" />
-
-            <TextView
-                android:id="@+id/txtAgentName"
-                android:layout_width="276dp"
-                android:layout_height="19dp"
-                android:text="Agent Name: "
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.081"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.308" />
-
-            <TextView
-                android:id="@+id/txtTotalCost"
-                android:layout_width="280dp"
-                android:layout_height="17dp"
-                android:text="Total Cost: "
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.068"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.358" />
+    <TextView
+        android:id="@+id/txtTotalCost"
+        android:layout_width="280dp"
+        android:layout_height="17dp"
+        android:text="Total Cost: Rs "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298" />
 
     <ListView
         android:id="@+id/damage_image_list"
         android:layout_width="match_parent"
         android:layout_height="344dp"
         app:layout_constraintBottom_toTopOf="@+id/btnButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTotalCost" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalCost"
+        app:layout_constraintVertical_bias="0.87"
+        tools:layout_editor_absoluteX="0dp" />
 
-            <Button
-                android:id="@+id/btnButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Send Mail"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.976" />
+    <Button
+        android:id="@+id/btnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Mail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

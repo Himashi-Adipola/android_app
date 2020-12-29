@@ -5,6 +5,9 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
@@ -28,29 +31,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bd4b135-4b48-4c32-8e41-b0678a1fb384" name="Default" comment="Cost Estimation">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/My_Application.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/My_Application.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/CostEstimationActivity3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/CostEstimationActivity3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_driver_history_verify.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_driver_history_verify.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_f_a_q.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_f_a_q.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_genarate_report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_genarate_report.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_upload.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_upload.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_driver_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_driver_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/botttom_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/botttom_menu.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,9 +96,11 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-13T10:32:36.298Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android-custom-viewC:/Users/Adipola/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/bottomnavigation/BottomNavigationView.java_SELECTED" value="BottomNavigationView" />
     <property name="android-custom-viewC:/Users/sajith/AppData/Local/Android/sdk/sources/android-28/android/widget/EditText.java_SELECTED" value="EditText" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-previewC:/Users/Adipola/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/bottomnavigation/BottomNavigationView.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/sajith/AppData/Local/Android/sdk/sources/android-28/android/widget/EditText.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
@@ -275,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608759625052</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="final change">
+      <created>1609049747634</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609049747635</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,7 +299,8 @@
     <MESSAGE value="Add functionality to estimate claim" />
     <MESSAGE value="Finalize Log in task" />
     <MESSAGE value="Cost Estimation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cost Estimation" />
+    <MESSAGE value="final change" />
+    <option name="LAST_COMMIT_MESSAGE" value="final change" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="42" key="#Inspections" timestamp="1609002969327">
@@ -356,22 +363,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609003411642" />
-    <state width="1322" height="186" key="GridCell.Tab.0.bottom" timestamp="1609006051883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="140" key="GridCell.Tab.0.bottom" timestamp="1609166201488">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1322" height="186" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609006051883" />
-    <state width="1322" height="186" key="GridCell.Tab.0.center" timestamp="1609006051883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="140" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1609166201488" />
+    <state width="1323" height="140" key="GridCell.Tab.0.center" timestamp="1609166201488">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1322" height="186" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609006051883" />
-    <state width="1322" height="186" key="GridCell.Tab.0.left" timestamp="1609006051883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="140" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1609166201488" />
+    <state width="1323" height="140" key="GridCell.Tab.0.left" timestamp="1609166201488">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1322" height="186" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609006051883" />
-    <state width="1322" height="186" key="GridCell.Tab.0.right" timestamp="1609006051883">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="140" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1609166201488" />
+    <state width="1323" height="140" key="GridCell.Tab.0.right" timestamp="1609166201488">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1322" height="186" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609006051883" />
+    <state width="1323" height="140" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1609166201488" />
     <state width="1322" height="115" key="GridCell.Tab.1.bottom" timestamp="1608748917450">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -392,10 +403,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="95" y="17" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606677295909" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1608759696308">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1609049825903">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608759696308" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1609049825903" />
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607835322175">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -404,10 +416,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="128" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1607845045693" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607856084554">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="346" y="50" width="672" height="160" key="search.everywhere.popup" timestamp="1609220642278">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607856084554" />
+    <state x="346" y="50" width="672" height="160" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1609220642278" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -459,7 +472,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/RegisterActivity.java</url>
-          <line>111</line>
+          <line>112</line>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
@@ -519,12 +532,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/LoginActivity.java</url>
-          <line>109</line>
+          <line>110</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/LoginActivity.java</url>
-          <line>110</line>
+          <line>111</line>
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
@@ -662,6 +675,36 @@
           <line>90</line>
           <option name="timeStamp" value="167" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageUploadActivity.java</url>
+          <line>331</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/RegisterActivity.java</url>
           <line>109</line>
@@ -670,13 +713,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/RegisterActivity.java</url>
-          <line>122</line>
+          <line>123</line>
           <properties method="onFailure" />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/LoginActivity.java</url>
-          <line>124</line>
+          <line>125</line>
           <properties method="onFailure" />
           <option name="timeStamp" value="87" />
         </line-breakpoint>

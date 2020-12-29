@@ -407,8 +407,8 @@
                         android:id="@+id/cost_estimate1b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Estimate Cost: "
-                        android:textColor="#D31E11" />
+                        android:text="Estimate Cost:Rs "
+                        android:textColor="#2B2929" />
 
 
                 </LinearLayout>
@@ -478,8 +478,8 @@
                         android:id="@+id/cost_estimate1c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Estimate Cost: "
-                        android:textColor="#D31E11" />
+                        android:text="Estimate Cost:Rs "
+                        android:textColor="#222020" />
 
 
                 </LinearLayout>
@@ -557,8 +557,8 @@
                         android:id="@+id/cost_estimate"
                         android:layout_width="match_parent"
                         android:layout_height="43dp"
-                        android:text="Estimate Cost: "
-                        android:textColor="#D31E11" />
+                        android:text="Estimate Cost:Rs "
+                        android:textColor="#2C2A2A" />
 
                     <TextView
                         android:id="@+id/textView28"
@@ -634,8 +634,8 @@
                         android:id="@+id/cost_estimate1a"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:text="Estimate Cost: "
-                        android:textColor="#D31E11" />
+                        android:text="Estimate Cost:Rs "
+                        android:textColor="#121111" />
 
                     <TextView
                         android:id="@+id/total_cost"

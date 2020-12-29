@@ -361,7 +361,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="54dp"
             android:orientation="horizontal">
 
             <TextView
@@ -369,8 +369,8 @@
                 android:layout_width="80dp"
                 android:layout_height="18dp"
                 android:text="Name"
-                android:textStyle="bold"
                 android:textSize="15dp"
+                android:textStyle="bold"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -398,7 +398,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="66dp"
+            android:layout_height="59dp"
             android:orientation="horizontal">
 
             <TextView
@@ -417,8 +417,8 @@
 
             <TextView
                 android:id="@+id/txtAddress"
-                android:layout_width="80dp"
-                android:layout_height="17dp"
+                android:layout_width="326dp"
+                android:layout_height="wrap_content"
                 android:text="Address"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -431,7 +431,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="59dp"
             android:orientation="horizontal">
 
 
@@ -464,15 +464,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="53dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtVContact"
                 android:layout_width="81dp"
                 android:layout_height="17dp"
-                android:textStyle="bold"
                 android:text="Contact"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/txtContact"
@@ -496,7 +496,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="53dp"
             android:orientation="horizontal">
 
 
@@ -530,14 +530,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="48dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/txtVPlace"
                 android:layout_width="81dp"
                 android:layout_height="19dp"
-                android:textStyle="bold"
                 android:text="Place"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/txtPlace"
@@ -545,6 +546,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.332" />
+
             <TextView
                 android:id="@+id/txtPlace"
                 android:layout_width="81dp"
@@ -558,9 +560,10 @@
                 app:layout_constraintVertical_bias="0.332" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="55dp"
             android:orientation="horizontal">
 
 
@@ -592,9 +595,10 @@
                 app:layout_constraintVertical_bias="0.332" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="51dp"
             android:orientation="horizontal">
 
 
@@ -625,9 +629,10 @@
                 app:layout_constraintVertical_bias="0.332" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="54dp"
             android:orientation="horizontal">
 
 
@@ -658,9 +663,10 @@
                 app:layout_constraintVertical_bias="0.332" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="57dp"
             android:orientation="horizontal">
 
 
@@ -695,7 +701,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="104dp"
+            android:layout_height="59dp"
             android:orientation="horizontal">
 
 
@@ -703,7 +709,7 @@
                 android:id="@+id/txtVReportCost"
                 android:layout_width="81dp"
                 android:layout_height="19dp"
-                android:text="Report Cost"
+                android:text="Claim Cost"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -733,6 +739,19 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/txtVReDes"
+                android:layout_width="89dp"
+                android:layout_height="19dp"
+                android:text="Description"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.332" />
+            <TextView
                 android:id="@+id/txtDescription"
                 android:layout_width="81dp"
                 android:layout_height="19dp"
@@ -743,18 +762,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.332" />
 
-            <TextView
-                android:id="@+id/txtVReDes"
-                android:layout_width="81dp"
-                android:layout_height="19dp"
-                android:text="Report Description"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/txtVehNo"
-                app:layout_constraintHorizontal_bias="0.4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.332" />
+
 
         </LinearLayout>
 

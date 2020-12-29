@@ -173,8 +173,10 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
 
         if(resultCode == RESULT_OK && data != null && data.getData() != null) {
             filePath = data.getData();
+         //   System.out.println("filepath" + filePath);
             if (requestCode == 1) {
                 SetImage(image,filePath);
+          //      System.out.println("image" + image);
                 filePaths[0] = getPath(filePath);
             }else if (requestCode == 2){
                 SetImage(image2,filePath);
@@ -327,6 +329,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
         ApiClientModelInterface userService = ApiClientModel.getClient().create(ApiClientModelInterface.class);
         //Create a file object using file path
         String path = getPath(filePath);
+       // System.out.println("path"+ path);
         File file = new File(path);
         // Create a request body with file and image media type
         RequestBody fileReqBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
@@ -408,7 +411,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
                 case "tail_lamp_broken": cost = 6500.00; break;
                 case "smashes": cost = 400000.00; break;
             }
-        }else if(damageType.equals("severe")){
+        }else if(damageType.equals("major")){
             switch(damageCategory){
                 case "doordent": cost = 4000.00; break;
                 case "bumperdent": cost = 8000.00; break;

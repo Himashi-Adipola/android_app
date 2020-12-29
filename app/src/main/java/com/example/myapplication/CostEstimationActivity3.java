@@ -31,6 +31,7 @@ public class CostEstimationActivity3 extends AppCompatActivity implements View.O
         vehicleList = findViewById(R.id.vehicle_list);
         VehicleListAdapter vehicleListAdapter = new VehicleListAdapter(this,vehicles);
         vehicleList.setAdapter(vehicleListAdapter);
+
         vehicleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

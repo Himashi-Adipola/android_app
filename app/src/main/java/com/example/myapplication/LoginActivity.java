@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 loginA();
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 builder.setCancelable(true);
-                builder.setTitle("Massage");
+                builder.setTitle("Message");
                 builder.setMessage("You Are Successfully registered");
                 builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
@@ -106,6 +106,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
                 if (response.isSuccessful()) {
+
                     System.out.println("response body" + response.body());
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("email",Email.getText().toString().trim());

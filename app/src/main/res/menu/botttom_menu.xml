@@ -13,7 +13,7 @@
     <item
         android:id ="@+id/find_spare_parts"
         android:enabled="true"
-        android:title="find spare parts"
+        android:title="Find Spare Parts"
         app:showAsAction="ifRoom"
 
         />

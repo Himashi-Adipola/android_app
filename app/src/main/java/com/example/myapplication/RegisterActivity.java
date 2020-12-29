@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.apiOps.ApiClient;
 import com.example.myapplication.apiOps.LoginAuth;
 import com.example.myapplication.apiOps.UserClient;
+import com.example.myapplication.model.Login;
 import com.example.myapplication.model.users;
 
 import org.json.JSONObject;
@@ -65,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 loadRecylerViewData();
                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                 builder.setCancelable(true);
-                builder.setTitle("Massage");
+                builder.setTitle("Message");
                 builder.setMessage("You Are Successfully registered");
                 builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
@@ -98,7 +99,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         user.setEmail(Email1.getText().toString());
         user.setPassword(Password1.getText().toString());
         user.setRole(role);
-        System.out.println("outputtttttt"+ user);
 
         UserClient userService = LoginAuth.getClient().create(UserClient.class);
 
@@ -109,7 +109,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
                 if (response.isSuccessful()) {
-                    startActivity( new Intent(getApplicationContext(),AgentProfileActivity.class));
+
+                    startActivity( new Intent(getApplicationContext(), LoginActivity.class));
                 } else {
                     try {
                         Toast.makeText(getApplicationContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();

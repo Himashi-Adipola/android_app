@@ -26,11 +26,20 @@ public class FAQActivity extends AppCompatActivity {
         A4=(TextView)findViewById(R.id.a4);
 
         Button btn=(Button)findViewById(R.id.callnow);
+        Button btn1=(Button)findViewById(R.id.messagenow);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:0711279637"));
+                startActivity(intent);
+            }
+        });
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + 711279637));
+                //intent.putExtra("sms_body", message);
                 startActivity(intent);
             }
         });

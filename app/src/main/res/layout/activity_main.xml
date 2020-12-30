@@ -74,10 +74,27 @@
 
         android:layout_marginBottom="41dp"
         app:srcCompat="@drawable/logorgb" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginEnd="-25dp"
+        android:layout_marginBottom="179dp"
+        android:text="Want any help?"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
     //android:layout_alignParentTop="true"
-       // android:paddingTop="1dp"
-       // android:paddingBottom="20dp"
-       // android:layout_alignParentStart="true"
+    // android:paddingTop="1dp"
+    // android:paddingBottom="20dp"
+    // android:layout_alignParentStart="true"
 
 
     <!--        android:layout_alignParentStart="true"-->

@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button Login;
     TextView CreateAccountLink;
+    TextView Help;
 
 
     @Override
@@ -26,9 +27,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void init(){
         Login =(Button) findViewById(R.id.bLogin);
         CreateAccountLink = (TextView) findViewById(R.id.tRegisterLink);
+        Help = (TextView) findViewById(R.id.help);
 
         Login.setOnClickListener(this);
         CreateAccountLink.setOnClickListener(this);
+        Help.setOnClickListener(this);
 
     }
 
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tRegisterLink:
                 startActivity( new Intent(this, com.example.myapplication.RegisterActivity.class));
+                break;
+            case R.id.help:
+                startActivity( new Intent(this, com.example.myapplication.FAQActivity.class));
                 break;
         }
 

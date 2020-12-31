@@ -79,7 +79,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         nearByPlace("car_repair");
                         break;
                     case R.id.find_spare_parts:
-                        nearByPlace("spare parts");
+                        nearByPlace("hardware_store");
                         break;
                     default:
                         break;
@@ -113,7 +113,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 if(placeType.equals("car_repair"))
 //                                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_baseline_add_location_24));
                                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-                                else if(placeType.equals("spare Parts"))
+                                else if(placeType.equals("hardware_store"))
 //                                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_baseline_add_location_24));
                                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
                                 else

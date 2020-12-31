@@ -123,5 +123,11 @@
         android:textColor="#007FFF"
         />
 
+    <TextView android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"/>
+
 </LinearLayout>
 

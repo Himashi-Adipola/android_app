@@ -62,25 +62,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()) {
             case R.id.bLogin:
                 loginA();
-                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                builder.setCancelable(true);
-                builder.setTitle("Message");
-                builder.setMessage("You Are Successfully registered");
-                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-
-                    }
-                });
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+//                builder.setCancelable(true);
+//                builder.setTitle("Message");
+//                builder.setMessage("You Are Successfully registered");
+//                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        dialogInterface.cancel();
+//
+//                    }
+//                });
+//                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+////                        alertText.setVisibility(view.VISIBLE);
 //                        alertText.setVisibility(view.VISIBLE);
-                        alertText.setVisibility(view.VISIBLE);
-                    }
-                });
-                builder.show();
+//                    }
+//                });
+//                builder.show();
                 break;
 
 
@@ -106,6 +106,26 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
                 if (response.isSuccessful()) {
+                    View tv2 = findViewById(R.id.tv2);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                builder.setCancelable(true);
+                builder.setTitle("Message");
+                builder.setMessage("You Are Successfully login");
+                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+
+                    }
+                });
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        alertText.setVisibility(view.VISIBLE);
+                        tv2.setVisibility(View.VISIBLE);
+                    }
+                });
+                builder.show();
 
                     System.out.println("response body" + response.body());
                     SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -115,6 +135,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                    startActivity(intent);
                 } else {
                     try {
+
+
                         Toast.makeText(getApplicationContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
 
@@ -124,15 +146,30 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onFailure(Call<JSONObject> call, Throwable t) {
+                View tv2 = findViewById(R.id.tv2);
+                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                builder.setCancelable(true);
+                builder.setTitle("Message");
+                builder.setMessage("You are not login");
+                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+
+                    }
+                });
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        alertText.setVisibility(view.VISIBLE);
+                        tv2.setVisibility(View.VISIBLE);
+                    }
+                });
+                builder.show();
 
             }
         });
     }
-
-    private void getSecret(){
-
-    }
-
 
 
     }

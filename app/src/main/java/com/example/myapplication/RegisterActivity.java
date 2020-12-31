@@ -64,25 +64,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.register:
                 loadRecylerViewData();
-                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                builder.setCancelable(true);
-                builder.setTitle("Message");
-                builder.setMessage("You Are Successfully registered");
-                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
 
-                    }
-                });
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        alertText.setVisibility(view.VISIBLE);
-                        alertText.setVisibility(view.VISIBLE);
-                    }
-                });
-                builder.show();
 
                  break;
             case R.id.directToLogin:
@@ -109,6 +91,27 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
                 if (response.isSuccessful()) {
+                    View tv2 = findViewById(R.id.tv2);
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                    builder.setCancelable(true);
+                    builder.setTitle("Message");
+                    builder.setMessage("You Are Successfully registered");
+                    builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.cancel();
+
+                        }
+                    });
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+//                        alertText.setVisibility(view.VISIBLE);
+                            tv2.setVisibility(View.VISIBLE);
+                        }
+                    });
+                    builder.show();
 
                     startActivity( new Intent(getApplicationContext(), LoginActivity.class));
                 } else {
@@ -122,6 +125,27 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             @Override
             public void onFailure(Call<JSONObject> call, Throwable t) {
+                View tv2 = findViewById(R.id.tv2);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                builder.setCancelable(true);
+                builder.setTitle("Message");
+                builder.setMessage("You are not registered");
+                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+
+                    }
+                });
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        alertText.setVisibility(view.VISIBLE);
+                        tv2.setVisibility(View.VISIBLE);
+                    }
+                });
+                builder.show();
 
             }
         });
